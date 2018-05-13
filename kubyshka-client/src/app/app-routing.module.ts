@@ -8,6 +8,7 @@ import { WalletCreateComponent } from './components/wallet-create/wallet-create.
 import { InOutcomesListComponent } from './components/in-outcomes-list/in-outcomes-list.component';
 import { InOutcomesCreateComponent } from './components/in-outcomes-create/in-outcomes-create.component';
 import { StatisticComponent } from './components/statistic/statistic.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
   { path: 'sign-in', component: SigninComponent },
@@ -16,7 +17,7 @@ const routes: Routes = [
   { path: 'add-wallet', component: WalletCreateComponent },
   { path: 'in-outcomes', component: InOutcomesListComponent },
   { path: 'add-in-outcomes', component: InOutcomesCreateComponent },
-  { path: 'statistic', component: StatisticComponent },
+  { path: 'statistic', component: StatisticComponent }
 ];
 
 @NgModule({

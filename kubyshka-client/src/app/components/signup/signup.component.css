@@ -78,8 +78,10 @@ img { max-width: 100%; }
 .top-content .description a:focus { border-bottom: 1px dotted #fff; }
 
 .form-box {
-    margin-top: 70px;
-    min-width: 300px;
+	min-width: 300px;
+	max-width: 400px;
+	margin: auto;
+	margin-top: 60px;
 }
 
 .form-top {
