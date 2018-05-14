@@ -32,7 +32,7 @@ export class SignupComponent implements OnInit {
   
     this.authService.signUp(this.user).subscribe((data: any) => {
       console.log("data");
-      this.router.navigate(['']);
+      this.router.navigate(['/sign-in']);
     },
       (err: HttpErrorResponse) => {
         if (err.error instanceof Error) {

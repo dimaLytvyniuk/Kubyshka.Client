@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'wallets', component: WalletListComponent },
   { path: 'add-wallet', component: WalletCreateComponent },
   { path: 'in-outcomes', component: InOutcomesListComponent },
-  { path: 'add-in-outcomes', component: InOutcomesCreateComponent },
+  { path: 'add-in-outcomes/:id', component: InOutcomesCreateComponent },
   { path: 'statistic', component: StatisticComponent }
 ];
 

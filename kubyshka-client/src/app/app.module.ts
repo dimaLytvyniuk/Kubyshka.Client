@@ -17,6 +17,9 @@ import { WalletCreateComponent } from './components/wallet-create/wallet-create.
 import { StatisticComponent } from './components/statistic/statistic.component';
 import { InOutcomesListComponent } from './components/in-outcomes-list/in-outcomes-list.component';
 import { InOutcomesCreateComponent } from './components/in-outcomes-create/in-outcomes-create.component';
+import { AuthInterceptor } from './services/auth.interceptor';
+import { WalletsService } from './services/wallets.service';
+import { InOutcomesService } from './services/in-outcomes.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,14 @@ import { InOutcomesCreateComponent } from './components/in-outcomes-create/in-ou
   ],
   providers: [
     RestUrlBuilder,
-    AuthService
+    AuthService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    },
+    WalletsService,
+    InOutcomesService
   ],
   bootstrap: [AppComponent]
 })

@@ -23,9 +23,9 @@ export class SigninComponent implements OnInit {
 
   onSignIn() {
     this.authService.signIn(this.user).subscribe((data: any) => {
-      console.log(data.token);
+      console.log(data);
       localStorage.setItem('token', data.token);
-      this.router.navigate(['']);
+      this.router.navigate(['/wallets']);
     },
       (err: HttpErrorResponse) => {
         if (err.error instanceof Error) {
