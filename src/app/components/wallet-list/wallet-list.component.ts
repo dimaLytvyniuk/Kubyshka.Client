@@ -9,7 +9,7 @@ import { WalletsService } from '../../services/wallets.service';
   styleUrls: ['./wallet-list.component.css']
 })
 export class WalletListComponent implements OnInit {
-  private walletList: WalletModel[];
+  public walletList: WalletModel[];
 
   constructor(
     private walletService: WalletsService

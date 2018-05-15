@@ -10,7 +10,7 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./in-outcomes-list.component.css']
 })
 export class InOutcomesListComponent implements OnInit {
-  private inOutComesList: InOutComeModel[];
+  public inOutComesList: InOutComeModel[];
 
   constructor(
     private inOutComesService: InOutcomesService,
