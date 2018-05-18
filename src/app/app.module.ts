@@ -19,6 +19,7 @@ import { InOutcomesCreateComponent } from './components/in-outcomes-create/in-ou
 import { AuthInterceptor } from './services/auth.interceptor';
 import { WalletsService } from './services/wallets.service';
 import { InOutcomesService } from './services/in-outcomes.service';
+import { StatisticService } from './services/statistic.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { InOutcomesService } from './services/in-outcomes.service';
       multi: true
     },
     WalletsService,
-    InOutcomesService
+    InOutcomesService,
+    StatisticService
   ],
   bootstrap: [AppComponent]
 })

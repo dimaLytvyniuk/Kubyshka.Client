@@ -35,7 +35,7 @@ export class InOutcomesCreateComponent implements OnInit {
   onCreateWallet() {
     this.model.wallet = +this.route.snapshot.paramMap.get('id');
     let date = new Date();
-    this.model.date = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+    this.model.date = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
     
     if (this.optionInOutCome == "Outcome") {
       this.model.amount *= -1;
