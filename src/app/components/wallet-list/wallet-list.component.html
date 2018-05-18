@@ -1,12 +1,14 @@
 <div id="page-wrapper">
+
+  <a routerLink="/add-wallet" class="btn btn-primary btn-lg add-wallet-button">
+    <i class="fa fa-plus"></i>
+  </a>
+
   <div class="row">
     <div class="col-lg-12">
       <h1 class="page-header">Wallets</h1>
       <h2>
-        <a routerLink="/add-wallet" class="btn btn-primary btn-xs">
-          <i class="fa fa-plus"></i>
-          Create New Wallet
-        </a>
+
       </h2>
     </div>
     <!-- /.col-lg-12 -->
@@ -14,30 +16,17 @@
   <!-- /.row -->
   <div class="row">
     <div *ngFor="let wallet of walletList">
-      <div class="col-lg-3 col-md-6">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <div class="row">
-              <div class="col-xs-6 text-left">
-                <div> Wallet name : {{wallet.name}}</div>
-              </div>
-              <div class="col-xs-6 text-right">
+      <div class="col-lg-4 col-md-6">
+        <div class="panel-heading-wallet">
+          <p> Name: {{wallet.name}}</p>
 
-                <div>Balance : {{wallet.amount}}</div>
+          <p>Balance: {{wallet.amount}}$</p>
 
-              </div>
-            </div>
-          </div>
-          <a routerLink="/add-in-outcomes/{{wallet.id}}">
-            <div class="panel-footer">
-              <span class="pull-left">Add bill</span>
-              <span class="pull-right">
-                <i class="fa fa-arrow-circle-right"></i>
-              </span>
-              <div class="clearfix"></div>
-            </div>
+          <a class="add-bill-button" routerLink="/add-in-outcomes/{{wallet.id}}">
+            <i class="fa fa-plus"></i>
           </a>
         </div>
+
       </div>
     </div>
   </div>
